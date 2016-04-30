@@ -36,6 +36,11 @@ app.get('/bigdata', routes.bigdata);
 app.get('/iot', routes.iot);
 app.get('/mobile', routes.mobile);
 app.get('/management', routes.management);
+app.get('/location',routes.location);
+app.get('/contactus',routes.contactus);
+app.get('/codeofconduct',routes.codeofconduct);
+app.get('/businessprocess',routes.businessprocess);
+app.get('/blog', routes.blog);
 
 http.createServer(app).listen(app.get('port'), function() {
 	console.log('Express server listening on port ' + app.get('port'));
