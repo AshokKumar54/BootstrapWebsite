@@ -31,3 +31,32 @@ exports.management = function(req, res) {
 		title : 'Valley Designer'
 	});
 };
+
+exports.location = function(req, res) {
+	res.render('location', {
+		title : 'Valley Designer'
+	});
+};
+
+exports.contactus = function(req, res) {
+	res.render('contact', {
+		title : 'Valley Designer'
+	});
+};
+
+exports.codeofconduct = function(req, res) {
+	res.render('codeofconduct', {
+		title : 'Valley Designer'
+	});
+};
+
+exports.businessprocess = function(req, res) {
+	res.render('businessprocess', {
+		title : 'Valley Designer'
+	});
+};
+exports.blog = function(req, res) {
+	res.render('blog', {
+		title : 'Valley Designer'
+	});
+};

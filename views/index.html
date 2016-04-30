@@ -13,35 +13,7 @@
 <!-- Custom Theme files -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script type="application/x-javascript">
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	 addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } 
 </script>
 <!--webfont-->
 <link
@@ -106,14 +78,14 @@
 							<li><a href="javascript:void(0)" data-hover="FEATURES">ABOUT US</a>
 								<ul>
 									<li><a href="/management" data-hover="MANAGEMENT">MANAGEMENT</a></li>
-									<li><a href="contact.html" data-hover="BIGDATA">CODE
+									<li><a href="/codeofconduct" data-hover="CODE OF CONDUCT">CODE
 											OF CONDUCT</a></li>
-									<li><a href="contact.html" data-hover="IOT">BUSINESS
+									<li><a href="/businessprocess" data-hover="BUSINESS PROCESS">BUSINESS
 											PROCESS</a></li>
-									<li><a href="contact.html" data-hover="IOT">LOCATIONS</a></li>
-									<li><a href="contact.html" data-hover="IOT">CONTACTS</a></li>
+									<li><a href="/location" data-hover="LOCATIONS">LOCATIONS</a></li>
+									<li><a href="/contactus" data-hover="CONTACT US">CONTACT US</a></li>
 								</ul></li>
-							<li><a href="contact.html" data-hover="CONTACT">BLOG</a></li>
+							<li><a href="/blog" data-hover="BLOG">BLOG</a></li>
 						</ul>
 					</nav>
 				</div>
@@ -131,17 +103,17 @@
 		<div class="slider">
 			<div id="ipresenter">
 				<div id="intro" class="step" data-x="0" data-y="0">
-					<img style="width: 100%; height: 100%;" src="/images/mobile.jpg" />
+					<img style="width: 100%; height: 100%;" src="/images/mobile-c.jpg" />
 				</div>
 
-				<div id="capture" class="step" data-x="1100" data-y="1200"
+				<div id="capture" class="step" data-x="2000" data-y="1200"
 					data-scale="1.8" data-rotate="180">
-					<img style="width: 100%; height: 100%;" src="/images/bigdata.jpg" />
+					<img style="width: 100%; height: 40%;" src="/images/bigdata-c.jpg" />
 				</div>
 
 				<div id="view" class="step" data-x="-300" data-y="600"
 					data-scale="0.2" data-rotate="270">
-					<img style="width: 100%; height: 100%;" src="/images/iot.jpg" />
+					<img style="width: 100%; height: 100%;" src="/images/iot-c.png" />
 				</div>
 			</div>
 		</div>
@@ -169,31 +141,37 @@
 			<div class="container">
 				<div class="sales-grids">
 					<div class="col-md-4 sales-grid-a">
-						<div align="center">
-							<h3 style="color: #fff;">Mobile</h3>
-						</div>
 						<div style="float: left; margin-left: -22%; padding-top: 10px;">
-							<img src="/images/mobileDev.png" alt="" />
+							<img class="img-circle" src="/images/mobileDev.png" alt="" />
 						</div>
 						<div class="clearfix"></div>
+						<div align="center">
+						  <h2>Mobile</h2>
+				          <p>Yes, everything we do is present on mobile!</p>
+				          <p><a class="btn btn-default" href="/bigdata" >Know more &raquo;</a></p>
+				        </div>
 					</div>
 					<div class="col-md-4 sales-grid-b">
-						<div align="center">
-							<h3 style="color: #fff;">Big Data</h3>
-						</div>
 						<div style="float: left; margin-left: -22%; padding-top: 10px;">
 							<img src="/images/big-data.png" alt="" />
 						</div>
 						<div class="clearfix"></div>
+						<div align="center">
+						  <h2>Big Data</h2>
+				          <p>We are the data crunchers!</p>
+				          <p><a class="btn btn-default" href="/bigdata" >Know more &raquo;</a></p>
+				        </div>
 					</div>
 					<div class="col-md-4 sales-grid-c">
-						<div align="center">
-							<h3 style="color: #fff;">Internet of Things</h3>
-						</div>
 						<div style="float: left; margin-left: -22%; padding-top: 10px;">
 							<img src="/images/internet-of-things.png" alt="" />
 						</div>
 						<div class="clearfix"></div>
+						<div align="center">
+						  <h2>Internet of Things</h2>
+				          <p>Oh, we meant, Internet of Everything!</p>
+				          <p><a class="btn btn-default" href="/iot">Know more &raquo;</a></p>
+				        </div>
 					</div>
 					<div class="clearfix"></div>
 				</div>
@@ -210,138 +188,47 @@
 				<div class="bottom-grids collections">
 					<div class="bottom-grids-left">
 						<div class="f-products">
-							<!----sreen-gallery-cursual---->
-							<div class="sreen-gallery-cursual">
-								<!-- requried-jsfiles-for owl -->
-								<link href="/stylesheets/owl.carousel.css" rel="stylesheet">
-								<script src="/js/owl.carousel.js"></script>
-								<script>
-									$(document).ready(function() {
-										$("#owl-demo").owlCarousel({
-											items : 3,
-											lazyLoad : true,
-											autoPlay : true,
-											navigation : true,
-											navigationText : false,
-											pagination : false,
-										});
-									});
-								</script>
-								<!-- //requried-jsfiles-for owl -->
-								<!-- start content_slider -->
-								<div id="owl-demo" class="owl-carousel text-center">
-									<div class="item">
-										<div onclick="location.href='single.html';"
-											class="product-grid">
-											<div class="product-pic">
-												<img src="/images/p1.jpg" title="Woman's T - Shirt" />
-											</div>
-											<div class="product-pic-info">
-												<h4>
-													<a href="#">Woman's T - Shirt</a>
-												</h4>
-												<div class="product-pic-info-price-cart">
-													<div class="product-pic-info-price">
-														<span>$129</span>
-													</div>
-													<div class="product-pic-info-cart">
-														<a class="p-btn" href="single.html">Add to Cart</a>
-													</div>
-													<div class="clearfix"></div>
-												</div>
-											</div>
-										</div>
-									</div>
-									<div class="item">
-										<div onclick="location.href='single.html';"
-											class="product-grid">
-											<div class="product-pic">
-												<img src="/images/p2.jpg" title="Woman's T - Shirt" />
-											</div>
-											<div class="product-pic-info">
-												<h4>
-													<a href="#">Woman's T - Shirt</a>
-												</h4>
-												<div class="product-pic-info-price-cart">
-													<div class="product-pic-info-price">
-														<span>$89</span>
-													</div>
-													<div class="product-pic-info-cart">
-														<a class="p-btn" href="single.html">Add to Cart</a>
-													</div>
-													<div class="clearfix"></div>
-												</div>
-											</div>
-										</div>
-									</div>
-									<div class="item">
-										<div onclick="location.href='single-page.html';"
-											class="product-grid">
-											<div class="product-pic">
-												<img src="/images/p3.jpg" title="Woman's T - Shirt" />
-											</div>
-											<div class="product-pic-info">
-												<h4>
-													<a href="#">Woman's T - Shirt</a>
-												</h4>
-												<div class="product-pic-info-price-cart">
-													<div class="product-pic-info-price">
-														<span>$149</span>
-													</div>
-													<div class="product-pic-info-cart">
-														<a class="p-btn" href="single.html">Add to Cart</a>
-													</div>
-													<div class="clearfix"></div>
-												</div>
-											</div>
-										</div>
-									</div>
-									<div class="item">
-										<div onclick="location.href='single.html';"
-											class="product-grid">
-											<div class="product-pic">
-												<img src="/images/p1.jpg" title="Woman's T - Shirt" />
-											</div>
-											<div class="product-pic-info">
-												<h4>
-													<a href="#">Woman's T - Shirt</a>
-												</h4>
-												<div class="product-pic-info-price-cart">
-													<div class="product-pic-info-price">
-														<span>$129</span>
-													</div>
-													<div class="product-pic-info-cart">
-														<a class="p-btn" href="single.html">Add to Cart</a>
-													</div>
-													<div class="clearfix"></div>
-												</div>
-											</div>
-										</div>
-									</div>
-									<div class="item">
-										<div onclick="location.href='single.html';"
-											class="product-grid">
-											<div class="product-pic">
-												<img src="/images/p3.jpg" title="Woman's T - Shirt" />
-											</div>
-											<div class="product-pic-info">
-												<h4>
-													<a href="#">Woman's T - Shirt</a>
-												</h4>
-												<div class="product-pic-info-price-cart">
-													<div class="product-pic-info-price">
-														<span>$129</span>
-													</div>
-													<div class="product-pic-info-cart">
-														<a class="p-btn" href="single.html">Add to Cart</a>
-													</div>
-													<div class="clearfix"></div>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-								<!--//sreen-gallery-cursual---->
+							<!-- START THE FEATURETTES -->
+
+      <hr class="featurette-divider">
+
+      <div class="row featurette">
+        <div class="col-md-7">
+          <h2 class="featurette-heading">Mobile<span class="text-muted"> We'll be available everywhere!</span></h2>
+          <p class="lead">"If you're not using mobile marketing to attract new customers to your business, don't worry - your competitors are already using it and are getting those customers instead." - Jamie Turner ~ 60SecondMarketing.com</p>
+        </div>
+        <div class="col-md-5">
+          <img class="featurette-image img-responsive center-block" src="./images/mobile-p.jpg" alt="Generic placeholder image">
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <div class="row featurette">
+        <div class="col-md-7 col-md-push-5">
+          <h2 class="featurette-heading">Big Data <span class="text-muted"> Yes, dealing with large stuff!</span></h2>
+          <p class="lead">"Information is the oil of the 21st century, and analytics is the combustion engine" - Peter Sondergaard ~ Gartner Research</p>
+        </div>
+        <div class="col-md-5 col-md-pull-7">
+          <img class="featurette-image img-responsive center-block" src="./images/bigdata-product.png" alt="Generic placeholder image">
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <div class="row featurette">
+        <div class="col-md-7">
+          <h2 class="featurette-heading">Internet of Things <span class="text-muted"> Every'thing' talks to every other 'thing'.</span></h2>
+          <p class="lead">"The Internet of Things has the potential to change the world, just as the Internet did. Maybe even more so." - Kevin Ashton ~ Atmel</p>
+        </div>
+        <div class="col-md-5">
+          <img class="featurette-image img-responsive center-block" src="./images/iot-p.png" alt="Generic placeholder image">
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <!-- /END THE FEATURETTES -->
 
 							</div>
 						</div>
@@ -349,17 +236,14 @@
 				</div>
 			</div>
 		</div>
-	</div>
 	<!-- products-section-ends -->
 	<!-- footer-section-starts -->
 	<div class="footer">
 		<div class="container">
 			<div class="col-md-6 bottom-menu">
 				<ul>
-					<li><a href="index.html">HOME</a></li>
-					<li><a href="#">PORTFOLIO</a></li>
-					<li><a href="#">SITEMAP</a></li>
-					<li><a href="contact.html"> CONTACT</a></li>
+					<li><a href="/">HOME</a></li>
+					<li><a href="/contactus">CONTACT US</a></li>
 				</ul>
 			</div>
 			<div class="col-md-6 copy-rights">
