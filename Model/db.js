@@ -2,8 +2,8 @@ var sqlDb = require("mysql");
 var settings = 
 {
 	host: 'localhost',
-	user: 'root',
-	password: 'parkwiz',
+	user: 'ashok',
+	password: 'ashok',
 	database: 'iotDB'
 };
 
