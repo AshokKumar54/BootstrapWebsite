@@ -1,7 +1,7 @@
 var sqlDb = require("mysql");
 var settings = 
 {
-	host: 'ec2-52-90-14-74.compute-1.amazonaws.com',
+	host: 'localhost',
 	user: 'root',
 	password: 'parkwiz',
 	database: 'iotDB'
