@@ -71,7 +71,6 @@ exports.addEntry = function(req, resp, reqBody){
 	try{
 		if(!reqBody)
 			throw new Error("Input not valid");
-		debugger;
 		if(typeof(reqBody) == "string"){
 		var data = JSON.parse(reqBody);
 	}
@@ -83,7 +82,6 @@ exports.addEntry = function(req, resp, reqBody){
 			sql += util.format("('%s', '%s', '%s');", data.fname, data.lname, data.email);
 			
 			db.executeSql(sql, function(data, err) {
-				debugger;
 				if(err) {
 					httpMsgs.show500(req, resp);
 				}
@@ -97,7 +95,6 @@ exports.addEntry = function(req, resp, reqBody){
 		}
 	}
 	catch(ex){
-		debugger;
 		httpMsgs.show500(req, resp, ex);
 	}
 

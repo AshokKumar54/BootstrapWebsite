@@ -10,7 +10,6 @@ var settings =
 exports.executeSql = function(sql, callback) {
 	var conn = new sqlDb.createConnection(settings);
 	conn.connect(function(err) {
-		debugger;
 		if(err) {
 			console.log(err);
 			return;

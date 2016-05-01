@@ -338,8 +338,6 @@
 		$(document).ready(function() {
 			$("#btniotwhitepaper").click(function() {
 				$("#btncanceliotwhitepaper").trigger("click");
-				
-				//var ele = document.getElementById('divuser')
 				var data = $('#divwhitepaperuser input');
 		        var user={};
 
@@ -350,8 +348,6 @@
 
 				//ajax call to database
 				$.ajax({ type: 'POST',url: "/api/download",data: user, success: function(result){
-		        //$("#divuser").html(result);
-		        	debugger;
 		    	}});
 				window.open("/downloads/bigdata-whitepaper.pdf");
 			});
@@ -368,8 +364,6 @@
 
 				//ajax call to database
 				$.ajax({ type: 'POST',url: "/api/download",data: user, success: function(result){
-		        //$("#divuser").html(result);
-		        	debugger;
 		    	}});
 				window.open("/downloads/bigdata-brochure.pdf");
 			});

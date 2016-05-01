@@ -55,6 +55,5 @@ http.createServer(app).listen(app.get('port'), function() {
 
 
 app.post('/api/download',function(req,res){
-	debugger;
 		routes.addEntry(req, res, req.body);
 });
