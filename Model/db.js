@@ -3,7 +3,7 @@ var settings =
 {
 	host: 'localhost',
 	user: 'root',
-	password: 'sa123',
+	password: 'parkwiz',
 	database: 'iotDB'
 };
 
