@@ -584,15 +584,44 @@
 	</div>
 	<!-- footer-section-ends -->
 	<script>
+		
 		$(document).ready(function() {
 			$("#btniotwhitepaper").click(function() {
 				$("#btncanceliotwhitepaper").trigger("click");
-				window.open("/downloads/bigdata-whitepaper.pdf");
+				var data = $('#divwhitepaperuser input');
+		        var user={};
+
+		        for (var i=0; i< data.length; i++) {
+		        	user[data[i].name] = data[i].value;	
+
+		        }
+
+				//ajax call to database
+				$.ajax({ type: 'POST',url: "/api/download",data: user, success: function(result){
+					window.open("/downloads/bigdata-whitepaper.pdf");
+		    	},
+		    	error: function(xhr, textStatus, errorThrown){
+					if (xhr.status != 200) alert(xhr.responseText);
+    			}});
 			});
 
 			$("#btniotbrochure").click(function() {
 				$("#btncanceliotbrochure").trigger("click");
-				window.open("/downloads/bigdata-brochure.pdf");
+				var data = $('#divbrochureuser input');
+		        var user={};
+
+		        for (var i=0; i< data.length; i++) {
+		        	user[data[i].name] = data[i].value;	
+
+		        }
+
+				//ajax call to database
+				$.ajax({ type: 'POST',url: "/api/download",data: user, success: function(result){
+					window.open("/downloads/bigdata-brochure.pdf");
+		    	},
+				error: function(xhr, textStatus, errorThrown){
+					if (xhr.status != 200) alert(xhr.responseText);
+    			}});
 			});
 		});
 	</script>
