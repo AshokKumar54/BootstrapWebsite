@@ -3,8 +3,10 @@
  */
 
 var express = require('express'), routes = require('./routes'), http = require('http'), path = require('path');
+var bodyParser = require("body-parser");
 
 var app = express();
+
 app.use(express.bodyParser());
 app.use(express.cookieParser());
 app.use(express.session({
@@ -24,6 +26,7 @@ app.use(express.logger('dev'));
 app.use(express.bodyParser());
 app.use(express.methodOverride());
 app.use(app.router);
+app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static(path.join(__dirname, 'public')));
 
 // development only
@@ -46,3 +49,12 @@ http.createServer(app).listen(app.get('port'), function() {
 	console.log('Express server listening on port ' + app.get('port'));
 });
 
+
+
+
+
+
+app.post('/api/download',function(req,res){
+	debugger;
+		routes.addEntry(req, res, req.body);
+});

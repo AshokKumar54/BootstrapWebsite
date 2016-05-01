@@ -315,7 +315,7 @@
 					</button>
 					<h4 class="modal-title" id="myModalLabel">Big Data Whitepaper</h4>
 				</div>
-				<div class="modal-body">
+				<div class="modal-body" id="divwhitepaperuser">
 					<div class="form-group">
 						<label for="firstname">First Name</label> <input required
 							type="text" class="form-control input-sm" name="fname">
@@ -350,7 +350,7 @@
 					</button>
 					<h4 class="modal-title" id="myModalLabel">Big Data Brochure</h4>
 				</div>
-				<div class="modal-body">
+				<div id="divbrochureuser" class="modal-body">
 					<div class="form-group">
 						<label for="firstname">First Name</label> <input required
 							type="text" class="form-control input-sm" name="fname">
@@ -394,14 +394,44 @@
 	</div>
 	<!-- footer-section-ends -->
 	<script>
+	
+
 		$(document).ready(function() {
 			$("#btniotwhitepaper").click(function() {
 				$("#btncanceliotwhitepaper").trigger("click");
+				
+				//var ele = document.getElementById('divuser')
+				var data = $('#divwhitepaperuser input');
+		        var user={};
+
+		        for (var i=0; i< data.length; i++) {
+		        	user[data[i].name] = data[i].value;	
+
+		        }
+
+				//ajax call to database
+				$.ajax({ type: 'POST',url: "/api/download",data: user, success: function(result){
+		        //$("#divuser").html(result);
+		        	debugger;
+		    	}});
 				window.open("/downloads/bigdata-whitepaper.pdf");
 			});
 
 			$("#btniotbrochure").click(function() {
 				$("#btncanceliotbrochure").trigger("click");
+				var data = $('#divbrochureuser input');
+		        var user={};
+
+		        for (var i=0; i< data.length; i++) {
+		        	user[data[i].name] = data[i].value;	
+
+		        }
+
+				//ajax call to database
+				$.ajax({ type: 'POST',url: "/api/download",data: user, success: function(result){
+		        //$("#divuser").html(result);
+		        	debugger;
+		    	}});
 				window.open("/downloads/bigdata-brochure.pdf");
 			});
 		});

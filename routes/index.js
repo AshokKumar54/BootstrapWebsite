@@ -60,3 +60,45 @@ exports.blog = function(req, res) {
 		title : 'Valley Designer'
 	});
 };
+
+
+var db = require("../Model/db");
+var httpMsgs = require("../Model/httpMsgs");
+var util = require("util");
+
+//POST
+exports.addEntry = function(req, resp, reqBody){
+	try{
+		if(!reqBody)
+			throw new Error("Input not valid");
+		debugger;
+		if(typeof(reqBody) == "string"){
+		var data = JSON.parse(reqBody);
+	}
+	else{
+		data = reqBody;
+	}
+		if(data){
+			var sql = "INSERT INTO iotDB.user(FirstName, LastName , Email) VALUES";
+			sql += util.format("('%s', '%s', '%s');", data.fname, data.lname, data.email);
+			
+			db.executeSql(sql, function(data, err) {
+				debugger;
+				if(err) {
+					httpMsgs.show500(req, resp);
+				}
+				else {
+					httpMsgs.send200(req, resp);
+				}
+			})
+		}
+		else {
+			throw new Error("Input not valid");
+		}
+	}
+	catch(ex){
+		debugger;
+		httpMsgs.show500(req, resp, ex);
+	}
+
+};
