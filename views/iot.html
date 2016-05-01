@@ -335,45 +335,52 @@
 	<script>
 	
 
-		$(document).ready(function() {
-			$("#btniotwhitepaper").click(function() {
-				$("#btncanceliotwhitepaper").trigger("click");
-				var data = $('#divwhitepaperuser input');
-		        var user={};
+	$(document).ready(function() {
+		$("#btniotwhitepaper").click(function() {
+			$("#btncanceliotwhitepaper").trigger("click");
+			var data = $('#divwhitepaperuser input');
+	        var user={};
 
-		        for (var i=0; i< data.length; i++) {
-		        	user[data[i].name] = data[i].value;	
+	        for (var i=0; i< data.length; i++) {
+	        	user[data[i].name] = data[i].value;	
 
-		        }
+	        }
 
-				//ajax call to database
-				$.ajax({ type: 'POST',url: "/api/download",data: user, success: function(result){
+			//ajax call to database
+			$.ajax({ type: 'POST',url: "/api/download",data: user, success: function(result){
+	    	},
+	    	error: function(xhr, textStatus, errorThrown){
+				if (xhr.status != 200){
+					alert(xhr.responseText);
+				}else{
 					window.open("/downloads/bigdata-whitepaper.pdf");
-		    	},
-		    	error: function(xhr, textStatus, errorThrown){
-					if (xhr.status != 200) alert(xhr.responseText);
-    			}});
-			});
-
-			$("#btniotbrochure").click(function() {
-				$("#btncanceliotbrochure").trigger("click");
-				var data = $('#divbrochureuser input');
-		        var user={};
-
-		        for (var i=0; i< data.length; i++) {
-		        	user[data[i].name] = data[i].value;	
-
-		        }
-
-				//ajax call to database
-				$.ajax({ type: 'POST',url: "/api/download",data: user, success: function(result){
-					window.open("/downloads/bigdata-brochure.pdf");
-		    	},
-				error: function(xhr, textStatus, errorThrown){
-					if (xhr.status != 200) alert(xhr.responseText);
-    			}});
-			});
+				}
+			}});
 		});
+
+		$("#btniotbrochure").click(function() {
+			$("#btncanceliotbrochure").trigger("click");
+			var data = $('#divbrochureuser input');
+	        var user={};
+
+	        for (var i=0; i< data.length; i++) {
+	        	user[data[i].name] = data[i].value;	
+
+	        }
+
+			//ajax call to database
+			$.ajax({ type: 'POST',url: "/api/download",data: user, success: function(result){
+				
+	    	},
+			error: function(xhr, textStatus, errorThrown){
+				if (xhr.status != 200){
+					alert(xhr.responseText);
+				}else{
+					window.open("/downloads/bigdata-brochure.pdf");
+				}
+			}});
+		});
+	});
 	</script>
 </body>
 </html>

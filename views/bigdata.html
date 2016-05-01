@@ -598,10 +598,13 @@
 
 				//ajax call to database
 				$.ajax({ type: 'POST',url: "/api/download",data: user, success: function(result){
-					window.open("/downloads/bigdata-whitepaper.pdf");
 		    	},
 		    	error: function(xhr, textStatus, errorThrown){
-					if (xhr.status != 200) alert(xhr.responseText);
+					if (xhr.status != 200){
+						alert(xhr.responseText);
+					}else{
+						window.open("/downloads/bigdata-whitepaper.pdf");
+					}
     			}});
 			});
 
@@ -617,10 +620,14 @@
 
 				//ajax call to database
 				$.ajax({ type: 'POST',url: "/api/download",data: user, success: function(result){
-					window.open("/downloads/bigdata-brochure.pdf");
+					
 		    	},
 				error: function(xhr, textStatus, errorThrown){
-					if (xhr.status != 200) alert(xhr.responseText);
+					if (xhr.status != 200){
+						alert(xhr.responseText);
+					}else{
+						window.open("/downloads/bigdata-brochure.pdf");
+					}
     			}});
 			});
 		});
