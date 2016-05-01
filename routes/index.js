@@ -83,7 +83,7 @@ exports.addEntry = function(req, resp, reqBody){
 			
 			db.executeSql(sql, function(data, err) {
 				if(err) {
-					httpMsgs.show500(req, resp);
+					httpMsgs.show500(req, resp, err);
 				}
 				else {
 					httpMsgs.send200(req, resp);

@@ -12,6 +12,7 @@ exports.executeSql = function(sql, callback) {
 	conn.connect(function(err) {
 		if(err) {
 			console.log(err);
+			callback(null, err);
 			return;
 		}
 

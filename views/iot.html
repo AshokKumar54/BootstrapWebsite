@@ -348,7 +348,11 @@
 
 				//ajax call to database
 				$.ajax({ type: 'POST',url: "/api/download",data: user, success: function(result){
-		    	}});
+					
+		    	},
+		    	error: function(xhr, textStatus, errorThrown){
+					alert(xhr.responseText);
+    			}});
 				window.open("/downloads/bigdata-whitepaper.pdf");
 			});
 
@@ -364,7 +368,11 @@
 
 				//ajax call to database
 				$.ajax({ type: 'POST',url: "/api/download",data: user, success: function(result){
-		    	}});
+					
+		    	},
+				error: function(xhr, textStatus, errorThrown){
+					alert(xhr.responseText);
+    			}});
 				window.open("/downloads/bigdata-brochure.pdf");
 			});
 		});

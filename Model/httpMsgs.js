@@ -16,9 +16,7 @@ exports.show404 = function(req, resp, err){
 };
 
 exports.show500 = function(req, resp, err){
-	//if(settings.httpMsgsFormat === "HTML"){
-		//resp
-		resp.writeHead(500, {"Content-Type": "application/json"});
-		resp.end();
-	//}
+	resp.writeHead(500, {"Content-Type": "application/json"});
+	resp.write(JSON.stringify(err));
+	resp.end();
 };
